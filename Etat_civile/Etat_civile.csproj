@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3B9F20D-B570-4084-B60F-AB52A25348BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Etat_civile</RootNamespace>
+    <AssemblyName>Etat_civile</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2, Version=2.0.4.2, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.2\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActeNaissance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActeNaissance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AddOfficier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOfficier.Designer.cs">
+      <DependentUpon>AddOfficier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPersonne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddPersonne.Designer.cs">
+      <DependentUpon>AddPersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADO.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeclarationDeNaissance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeclarationDeNaissance.Designer.cs">
+      <DependentUpon>DeclarationDeNaissance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeclarationDivorce.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeclarationDivorce.Designer.cs">
+      <DependentUpon>DeclarationDivorce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeclarationMariage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeclarationMariage.Designer.cs">
+      <DependentUpon>DeclarationMariage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mariage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mariage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Officier.cs" />
+    <Compile Include="Parent.cs" />
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecuperePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecuperePassword.Designer.cs">
+      <DependentUpon>RecuperePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deces.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deces.Designer.cs">
+      <DependentUpon>Deces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportNaissance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportNaissance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SAPNaissance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAPNaissance.Designer.cs">
+      <DependentUpon>SAPNaissance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="Traces.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Traces.Designer.cs">
+      <DependentUpon>Traces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="ActeNaissance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ActeNaissance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOfficier.resx">
+      <DependentUpon>AddOfficier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPersonne.resx">
+      <DependentUpon>AddPersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deces.resx">
+      <DependentUpon>Deces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeclarationDeNaissance.resx">
+      <DependentUpon>DeclarationDeNaissance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeclarationDivorce.resx">
+      <DependentUpon>DeclarationDivorce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeclarationMariage.resx">
+      <DependentUpon>DeclarationMariage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mariage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Mariage.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecuperePassword.resx">
+      <DependentUpon>RecuperePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportNaissance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportNaissance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAPNaissance.resx">
+      <DependentUpon>SAPNaissance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Traces.resx">
+      <DependentUpon>Traces.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ivory_Coast_flag_with_coat_of_arms.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_of_Ivory_Coast.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cote-d-Ivoire_240-animated-flag-gifs.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utilisateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloquer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_169063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_542950.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traverser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15153.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151531.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cote_dIvoire_moi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2195392.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marriage-icon-png-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\531864.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6016619.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5018009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\341608.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3641541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3641555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\531762.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2957121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7316395.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7316661.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bague.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ring.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5054372.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_processing20191028-31344-11uhdiz.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sauvegarder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top-fichier.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groom.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connexion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\femme.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow-boy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\echelle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-decision.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\competence-analytique.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
